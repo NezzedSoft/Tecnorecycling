@@ -5,37 +5,37 @@ const Services: React.FC = () => {
   const services = [
     {
       id: 1,
-      title: "Collection & Transportation",
-      description: "We offer convenient pickup services for businesses and drop-off locations for individuals. Our specialized equipment ensures safe handling of all electronic waste.",
-      image: "https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      title: "Reciclaje de Componentes",
+      description: "Aceptamos tarjetas de video, procesadores y motherboards para un reciclaje adecuado.",
+      image: "https://images.unsplash.com/photo-1610198965164-a704ae4e4c2c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 2,
-      title: "Secure Data Destruction",
-      description: "All storage devices undergo certified data wiping or physical destruction processes that meet the highest security standards, protecting your sensitive information.",
-      image: "https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      title: "Dispositivos Móviles Reciclados",
+      description: "Reciclamos teléfonos celulares y tablets de manera responsable y sostenible.",
+      image: "https://images.unsplash.com/photo-1604671368394-2240d0b1bb6c?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 3,
-      title: "Sorting & Dismantling",
-      description: "Our technicians carefully disassemble devices to separate reusable components, hazardous materials, and valuable resources for appropriate processing.",
-      image: "https://images.pexels.com/photos/5712158/pexels-photo-5712158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      title: "Equipos de Red",
+      description: "Reciclamos centrales telefónicas, equipos de red y telecomunicaciones de manera segura.",
+      image: "https://images.unsplash.com/photo-1717667745852-a5bd6876c1de?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 4,
-      title: "Material Recovery",
-      description: "Using advanced processes, we extract precious metals, plastics, and other materials from e-waste for reintroduction into the manufacturing supply chain.",
-      image: "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      title: "Reciclaje electrónico Eficiente",
+      description: "Ofrecemos soluciones para el reciclaje de equipos tecnológicos de RAEE / e-waste efectiva.",
+      image: "https://images.unsplash.com/photo-1606718220923-fcb2abd9a778?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 
   return (
-    <section id="services" className="py-20">
+    <section id="servicios" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Our Recycling Process</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Servicios</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We follow a comprehensive, environmentally responsible approach to recycling electronic devices, ensuring maximum resource recovery and minimal environmental impact.
+            Seguimos un enfoque integral y ambientalmente responsable para el reciclaje de dispositivos electrónicos, garantizando la máxima recuperación de recursos y el mínimo impacto ambiental.
           </p>
         </div>
 
@@ -59,10 +59,10 @@ const Services: React.FC = () => {
                 </h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <a 
-                  href="#contact" 
+                  href="#contacto" 
                   className="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors"
                 >
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                  Conocer más <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
             </div>

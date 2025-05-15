@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Recycle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,15 +28,14 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <Recycle className="h-8 w-8 text-green-600 mr-2" />
           <span className={`font-bold text-xl ${scrolled ? 'text-green-700' : 'text-white'}`}>
-            EcoTech Recycling
+            Tecnorecycling
           </span>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {['Inicio', 'Beneficios', 'Servicios', 'Sobre Nosotros', 'Contacto'].map((item) => (
+          {['Inicio', 'Beneficios', 'Servicios', 'Contacto'].map((item) => (
             <a 
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -66,7 +65,7 @@ const Header: React.FC = () => {
       {isOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-md py-4 px-4 md:hidden">
           <nav className="flex flex-col space-y-4">
-            {['Inicio', 'Beneficios', 'Servicios', 'Sobre Nosotros', 'Contacto'].map((item) => (
+            {['Inicio', 'Beneficios', 'Servicios', 'Contacto'].map((item) => (
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`}

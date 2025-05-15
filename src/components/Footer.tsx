@@ -1,5 +1,5 @@
 import React from 'react';
-import { Recycle } from 'lucide-react';
+import tecnologo from '../../assets/tecnorecycling_logo_circular.png'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +10,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <Recycle className="h-8 w-8 text-green-400 mr-2" />
-              <span className="font-bold text-xl">
-                Tecnorecycling
-              </span>
+              <img src={tecnologo} alt="Tecno logo" className='w-52 h-52' />
             </div>
             <p className="text-gray-400 mb-4">
               Liderando el camino en el reciclaje responsable de residuos electrónicos.
@@ -28,12 +25,12 @@ const Footer: React.FC = () => {
               </a>
 
               {/* X (Twitter) */}
-              <a href="https://www.twitter.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-gray-400 hover:bg-green-500 p-3 rounded-full transition-colors">
+              {/* <a href="https://www.twitter.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-gray-400 hover:bg-green-500 p-3 rounded-full transition-colors">
                 <span className="sr-only">X</span>
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                   <path d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"></path>
                 </svg>
-              </a>
+              </a> */}
 
               {/* Instagram */}
               <a href="https://www.instagram.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-gray-400 hover:bg-green-500 p-3 rounded-full transition-colors">
@@ -44,19 +41,19 @@ const Footer: React.FC = () => {
               </a>
 
               {/* LinkedIn */}
-              <a href="https://www.linkedin.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-gray-400 hover:bg-green-500 p-3 rounded-full transition-colors">
+              {/* <a href="https://www.linkedin.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-gray-400 hover:bg-green-500 p-3 rounded-full transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                   <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Enlaces rápidos</h3>
             <ul className="space-y-2">
-              {['Inicio', 'Beneficios', 'Servicios', 'Sobre Nosotros', 'Contacto'].map((item) => (
+              {['Inicio', 'Beneficios', 'Servicios', 'Contacto'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
@@ -70,18 +67,17 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2">
               {[
-                'Corporate Recycling',
-                'Residential Pickup',
-                'Data Destruction',
-                'IT Asset Disposition',
-                'E-waste Consulting'
+                'Reciclaje corporativo',
+                'Reciclaje residencial',
+                'Destrucción de datos',
+                'Consultoría de residuos electrónicos'
               ].map((item) => (
                 <li key={item}>
                   <a
-                    href="#services"
+                    href="#servicios"
                     className="text-gray-400 hover:text-green-400 transition-colors"
                   >
                     {item}
@@ -108,11 +104,10 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {currentYear} EcoTech Recycling. All rights reserved.</p>
+          <p>&copy; {currentYear} Tecnorecycling. Todos los derechos reservados.</p>
           <div className="mt-2 space-x-4">
-            <a href="#" className="hover:text-green-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-green-400 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-green-400 transition-colors">Sitemap</a>
+            <a href="#" className="hover:text-green-400 transition-colors">Politicas de Privacidad</a>
+            <a href="#" className="hover:text-green-400 transition-colors">Terminos de Servicio</a>
           </div>
         </div>
       </div>

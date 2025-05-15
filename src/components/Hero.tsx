@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.pexels.com/photos/128421/pexels-photo-128421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+          src="https://images.unsplash.com/photo-1746013426060-adbf530817c3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
           alt="Electronic circuits" 
           className="w-full h-full object-cover"
         />
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10 text-white">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Give Your Old Electronics a <span className="text-green-400">New Life</span>
+            Reciclá tus electrónicos.<span className="text-green-400">Cuidá el planeta.</span>
           </h1>
           <p className="text-lg md:text-xl opacity-90 mb-8">
             Soluciones de reciclaje responsable para sus residuos electrónicos. 

@@ -6,8 +6,7 @@ const ContactForm: React.FC = () => {
     name: '',
     email: '',
     phone: '',
-    message: '',
-    deviceType: ''
+    message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,30 +20,38 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
+  setTimeout(() => {
+    setIsSubmitting(false);
+    setSubmitSuccess(true);
+
+    // Construir mensaje de WhatsApp
+    const { name, email, phone, message } = formData;
+    const text = `Hola! Soy ${name}. Quiero reciclar un dispositivo electrónico.\n\n Teléfono: ${phone}\n Email: ${email}\n Mensaje: ${message}`;
+    const encodedText = encodeURIComponent(text);
+
+    // Número de destino (incluye código de país, sin símbolos)
+    const whatsappNumber = "50761905805"; // Reemplazá con tu número
+
+    // Abrir WhatsApp
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
+
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
+
     setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-
-      // Reset form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        deviceType: '',
-      });
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
-  };
+      setSubmitSuccess(false);
+    }, 5000);
+  }, 1500);
+};
 
   return (
     <section id="contacto" className="py-20">
@@ -137,7 +144,7 @@ const ContactForm: React.FC = () => {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Processing...
+                        Procesando...
                       </span>
                     ) : (
                       <span className="inline-flex items-center">
@@ -201,12 +208,12 @@ const ContactForm: React.FC = () => {
                   </a>
 
                   {/* X (Twitter) */}
-                  <a href="https://www.twitter.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-500 p-3 rounded-full transition-colors">
+                  {/* <a href="https://www.twitter.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-500 p-3 rounded-full transition-colors">
                     <span className="sr-only">X</span>
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                       <path d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"></path>
                     </svg>
-                  </a>
+                  </a> */}
 
                   {/* Instagram */}
                   <a href="https://www.instagram.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-500 p-3 rounded-full transition-colors">
@@ -217,12 +224,12 @@ const ContactForm: React.FC = () => {
                   </a>
 
                   {/* LinkedIn */}
-                  <a href="https://www.linkedin.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-500 p-3 rounded-full transition-colors">
+                  {/* <a href="https://www.linkedin.com/tecnorecyclingpty" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-500 p-3 rounded-full transition-colors">
                     <span className="sr-only">LinkedIn</span>
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                       <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
                     </svg>
-                  </a>
+                  </a> */}
                 </div>
 
               </div>
