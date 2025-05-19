@@ -24,11 +24,6 @@ const BenefitCard: React.FC<{
 const Benefits: React.FC = () => {
   const benefits = [
     {
-      icon: <Leaf size={32} />,
-      title: "Impacto Ambiental Positivo",
-      description: "Reducimos la contaminación y el deterioro ambiental causado por los desechos electrónicos que contienen sustancias tóxicas."
-    },
-    {
       icon: <Shield size={32} />,
       title: "Seguridad de Datos",
       description: "Garantizamos la destrucción segura de datos en todos los dispositivos de almacenamiento, protegiendo tu información confidencial."
