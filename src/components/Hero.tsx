@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           <div className="lg:w-1/2 lg:pl-12">
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/4545161/pexels-photo-4545161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="/photo-1566843017081-a27f11f2bf05.avif" 
                 alt="Reciclaje de equipos electrónicos" 
                 className="rounded-lg shadow-xl w-full object-cover h-[400px]"
               />
